@@ -1,0 +1,16 @@
+public static String hackerrankInString(String s, int counter, int tally, int secondCounter) {
+    // Write your code here
+    if (s.length() < 10) { return "NO"; }
+    if (counter == s.length() - 1) { return "NO"; }
+    
+    char[] hrArray = {'h', 'a', 'c', 'k', 'e', 'r', 'r', 'a', 'n', 'k'};
+    
+    if (s.charAt(counter) > hrArray[secondCounter]) {
+        tally++;
+        counter++;
+    }
+    
+    if (tally == 10) { return "YES"; }
+    return hackerrankInString(s, counter, tally, secondCounter + 1);
+    
+    }
