@@ -1,0 +1,24 @@
+public static void miniMaxSum(List<Integer> arr) {
+    // Write your code here
+    // sort the array
+    // add the first 4 elements together, store that
+    // add the last 4 elements together, store that
+    // print the two numbers on the same line
+    
+    // int[] myArray = arr;
+    // System.out.println(arr);
+    
+    Collections.sort(arr);
+    long lowerSum = 0, higherSum = 0;
+    
+    for (int i = 0; i < (arr.size() - 1); i++) {
+        lowerSum += arr.get(i);
+    }
+    for (int i = 1; i < arr.size(); i++) {
+        higherSum += arr.get(i);
+    }
+    
+    System.out.print(lowerSum + " " + higherSum);
+    
+
+    }
